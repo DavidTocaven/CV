@@ -1,0 +1,152 @@
+%david Tocaven
+
+
+%--------------------------------------------------------------------------------------------
+%% 			Défintion de nouvelles commandes pour plus de souplesse dans moderncv.
+%--------------------------------------------------------------------------------------------
+
+% -----------------------------------------------------
+% 				Paquets nécessaires
+% -----------------------------------------------------
+
+\usepackage{xspace} % gestion des espaces à la fin des commandes
+\usepackage{soulutf8} % plus de libertée dans les soulignages
+\usepackage[french]{babel}
+\usepackage{xargs} % pour avoir plusieurs attribut qui ont des valeurs par defaut
+% -----------------------------------------------------
+% 				Nouvelles Commandes
+% -----------------------------------------------------
+	\definecolor{vert}{RGB}{16,150,24}
+
+
+
+%---------- \partie{titre} : ma typo de section -------
+% Entrée :
+%#1=titre de la partie
+\newcommand{\partie}[1]{\setul{}{2pt} \par \noindent\hspace{1cm} \textcolor{vert}{\begin{Large}{\ul{#1}}\end{Large}}\newline}
+
+%---------- \diplome{date}{nom du diplôme}{établissement}{lieu} : un bloc de diplôme-------
+% Entrées :
+%#1=date
+%#2=nom du diplôme
+%#3=établissement
+%#4=lieu
+\newcommand{\diplome}[4]{\par%
+\begin{minipage}[t]{2.3cm}%    la date
+\begin{flushright}%
+#1%
+\end{flushright}%
+\end{minipage}%
+\hspace{2mm}%
+%
+\begin{minipage}[t]{\textwidth - 2.3cm -2mm}%   nom du diplôme, établissement et lieu
+%
+\begin{minipage}[t]{\textwidth}%  Non du dipôme
+\textbf{#2,}\vspace{1mm}%
+\end{minipage}%
+\newline%
+\begin{minipage}[t]{\textwidth}%    etablissement et lieu
+\begin{flushleft}%
+\textit{#3,\linebreak[2] #4.}%
+\end{flushleft}%
+\end{minipage}%
+%
+\end{minipage}%
+\newline%
+}
+
+%---------- \experience{date}{durée}{établissement}{lieu}{intitulé}{Points intéressants} : un bloc d'expérience professionnelle-------
+% Entrées :
+%#1=date
+%#2=durée
+%#3=établissement
+%#4=lieu
+%#5=intitulé
+%#6=Points intéressants (séparés par des --)
+\newcommand{\experience}[6]{\par%
+\begin{minipage}[t]{2.3cm}%    la date et la durée
+\begin{flushright}%
+#1%date
+
+\if #2\empty %
+\else%
+(#2)%durée
+\fi%
+
+\end{flushright}%
+\end{minipage}%
+\hspace{2mm}%
+%
+\begin{minipage}[t]{\textwidth - 2.3cm -2mm}% %
+%
+\begin{minipage}[t]{\textwidth}%
+\textbf{#5, }\vspace{1mm}%intitulé
+\textit{%
+\if #3\empty %
+\else%
+#3%
+%
+\if #4\empty %
+\else
+,\linebreak[2] 
+\fi
+\fi%
+\if #4\empty %
+\else%
+#4.%
+\fi%
+}%
+\end{minipage}%
+\newline%
+\begin{minipage}[t]{\textwidth}%
+\begin{flushleft}%
+#6%
+\end{flushleft}%
+\end{minipage}%
+%
+\end{minipage}%
+\newline%
+}
+
+
+%---------- \tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3} : une ligne avec 3 elements type itemise-------
+% Entrées :
+%#1=itemSymbole1(=\textbullet)
+%#2=text1
+%#3=itemSymbole2(=\textbullet)
+%#4=text2
+%#5=itemSymbole3(=\textbullet)
+%#6=text3
+\newcommandx{\tripleitemise}[6][1=\textbullet,3=\textbullet,5=\textbullet]{\par%
+% bloc 1
+\begin{minipage}[t]{.33\textwidth}%
+\if #2\empty% si text1 n'est pas vide
+\else%
+\noindent\hspace{3mm} #1%
+\noindent\begin{minipage}[t]{\textwidth - 5mm}%
+\noindent\hspace{1mm} #2%
+\end{minipage}%
+\fi%
+\end{minipage}\hfill%
+% bloc 2
+\noindent\begin{minipage}[t]{.33\textwidth}%
+\if #4\empty% si text1 n'est pas vide
+\else%
+\noindent\hspace{3mm} #3%
+\noindent\begin{minipage}[t]{\textwidth - 5mm}%
+\noindent\hspace{1mm} #4%
+\end{minipage}%
+\fi%
+\end{minipage}\hfill%
+% bloc 3
+\begin{minipage}[t]{.33\textwidth}%
+\if #6\empty% si text1 n'est pas vide
+\else%
+\noindent\hspace{3mm} #5%
+\noindent\begin{minipage}[t]{\textwidth - 5mm}%
+\noindent\hspace{1mm} #6%
+\end{minipage}%
+\fi%
+\end{minipage}%
+\newline
+}
