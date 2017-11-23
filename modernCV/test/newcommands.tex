@@ -23,7 +23,12 @@
 %---------- \partie{titre} : ma typo de section -------
 % Entrée :
 %#1=titre de la partie
-\newcommand{\partie}[1]{\setul{}{2pt} \par \noindent\hspace{1cm} \textcolor{vert}{\begin{Large}{\ul{#1}}\end{Large}}\newline}
+\newcommand{\partie}[2][Large]{\setul{}{2pt} \par%
+\noindent\hspace{1cm}%
+\begin{minipage}[t]{.9\textwidth}
+\textcolor{vert}{\begin{#1}{\ul{#2}}\end{#1}}%
+\end{minipage}%
+ \newline}
 
 %---------- \diplome{date}{nom du diplôme}{établissement}{lieu} : un bloc de diplôme-------
 % Entrées :
@@ -122,7 +127,9 @@
 \begin{minipage}[t]{.33\textwidth}%
 \if #2\empty% si text1 n'est pas vide
 \else%
-\noindent\hspace{3mm} #1%
+\noindent\begin{minipage}[t]{5mm}%
+\noindent #1\hspace{3mm}%
+\end{minipage}%
 \noindent\begin{minipage}[t]{\textwidth - 5mm}%
 \noindent\hspace{1mm} #2%
 \end{minipage}%
@@ -132,7 +139,9 @@
 \noindent\begin{minipage}[t]{.33\textwidth}%
 \if #4\empty% si text1 n'est pas vide
 \else%
-\noindent\hspace{3mm} #3%
+\noindent\begin{minipage}[t]{5mm}%
+\noindent #3\hspace{3mm}%
+\end{minipage}%
 \noindent\begin{minipage}[t]{\textwidth - 5mm}%
 \noindent\hspace{1mm} #4%
 \end{minipage}%
@@ -142,11 +151,49 @@
 \begin{minipage}[t]{.33\textwidth}%
 \if #6\empty% si text1 n'est pas vide
 \else%
-\noindent\hspace{3mm} #5%
+\noindent\begin{minipage}[t]{5mm}%
+\noindent #5\hspace{3mm}%
+\end{minipage}%
 \noindent\begin{minipage}[t]{\textwidth - 5mm}%
 \noindent\hspace{1mm} #6%
 \end{minipage}%
 \fi%
 \end{minipage}%
-\newline
+\newline%
+}
+
+%---------- \\tripleitemiseavecTitre{titre1}{text1}{titre2}{text2}{titre3}{text3}: trois colonnes avec un titre et une description par colonnes-------
+% Entrées :
+%#1=titre1
+%#2=text1
+%#3=titre2
+%#4=text2
+%#5=titre3
+%#6=text3
+\newcommand{\tripleitemiseavecTitre}[6]{\par%
+% bloc 1
+\begin{minipage}[t]{.325\textwidth}%
+\if #2\empty% si text1 n'est pas vide
+\else%
+\partie[large]{#1}%
+{#2}%
+\fi%
+\end{minipage}\hfill%
+% bloc 2
+\noindent\begin{minipage}[t]{.325\textwidth}%
+\if #4\empty% si text1 n'est pas vide
+\else%
+\partie[large]{#3}%
+{#4}%
+\fi%
+\end{minipage}\hfill%
+% bloc 3
+\noindent\begin{minipage}[t]{.325\textwidth}%
+\if #6\empty% si text1 n'est pas vide
+\else%
+\partie[large]{#5}%
+{#6}%
+\fi%
+\end{minipage}\hfill%
+\newline%
 }
