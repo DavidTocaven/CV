@@ -1,0 +1,8 @@
+
+*.log
+
+modernCV/test/brouillon\.synctex\.gz
+
+modernCV/test/template-multibib_V3\.synctex\.gz
+
+modernCV/test/template-multibib\.synctex\.gz

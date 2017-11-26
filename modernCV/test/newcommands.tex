@@ -1,4 +1,4 @@
-%david Tocaven
+ %david Tocaven
 
 
 %--------------------------------------------------------------------------------------------
@@ -29,8 +29,9 @@
 \textcolor{vert}{\begin{#1}{\ul{#2}}\end{#1}}%
 \end{minipage}%
  \newline}
-
+%------------------------------------------------------------------------------------------
 %---------- \diplome{date}{nom du diplôme}{établissement}{lieu} : un bloc de diplôme-------
+%------------------------------------------------------------------------------------------
 % Entrées :
 %#1=date
 %#2=nom du diplôme
@@ -59,8 +60,9 @@
 \end{minipage}%
 \newline%
 }
-
+%-------------------------------------------------------------------------------------------------------------------------------------
 %---------- \experience{date}{durée}{établissement}{lieu}{intitulé}{Points intéressants} : un bloc d'expérience professionnelle-------
+%-------------------------------------------------------------------------------------------------------------------------------------
 % Entrées :
 %#1=date
 %#2=durée
@@ -70,15 +72,15 @@
 %#6=Points intéressants (séparés par des --)
 \newcommand{\experience}[6]{\par%
 \begin{minipage}[t]{2.3cm}%    la date et la durée
-\begin{flushright}%
+\begin{flushleft}%
 #1%date
-
+\end{flushleft}%
+\begin{center}%
 \if #2\empty %
 \else%
 (#2)%durée
 \fi%
-
-\end{flushright}%
+\end{center}%
 \end{minipage}%
 \hspace{2mm}%
 %
@@ -113,8 +115,9 @@
 \newline%
 }
 
-
+%----------------------------------------------------------------------------------------------------------------------------------------
 %---------- \tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3} : une ligne avec 3 elements type itemise-------
+%----------------------------------------------------------------------------------------------------------------------------------------
 % Entrées :
 %#1=itemSymbole1(=\textbullet)
 %#2=text1
@@ -161,8 +164,9 @@
 \end{minipage}%
 \newline%
 }
-
+%----------------------------------------------------------------------------------------------------------------------------------------
 %---------- \\tripleitemiseavecTitre{titre1}{text1}{titre2}{text2}{titre3}{text3}: trois colonnes avec un titre et une description par colonnes-------
+%----------------------------------------------------------------------------------------------------------------------------------------
 % Entrées :
 %#1=titre1
 %#2=text1
@@ -178,7 +182,7 @@
 \partie[large]{#1}%
 {#2}%
 \fi%
-\end{minipage}\hfill%
+\end{minipage}\hfill %
 % bloc 2
 \noindent\begin{minipage}[t]{.325\textwidth}%
 \if #4\empty% si text1 n'est pas vide
