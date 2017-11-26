@@ -45,9 +45,9 @@
 \newcommandx{\souspartie}[3][1=Large,3=2pt]{\setul{}{#3}\par%
 \noindent\hspace{3mm}\textcolor{vert}{\begin{#1}{$\smallblacktriangleright$}\end{#1}}\hspace{1mm}%
 \begin{minipage}[t]{.9\textwidth}%
-\textcolor{vert}{\begin{#1}{\ul{#2}}\end{#1}}%
+\noindent\textcolor{vert}{\begin{#1}{\ul{#2}}\end{#1}}%
 \end{minipage}%
-\newline%
+\par\noindent%
 }
 
 %------------------------------------------------------------------------------------------
@@ -60,9 +60,9 @@
 %#4=lieu
 \newcommand{\diplome}[4]{\par%
 \begin{minipage}[t]{2.3cm}%    la date
-\begin{flushright}%
+\begin{flushleft}%
 #1%
-\end{flushright}%
+\end{flushleft}%
 \end{minipage}%
 \hspace{2mm}%
 %
@@ -93,35 +93,26 @@
 %#6=Points intéressants (séparés par des --)
 \newcommand{\experience}[6]{\par%
 \begin{minipage}[t]{2.3cm}%    la date et la durée
-\begin{flushleft}%
-#1%date
-\end{flushleft}%
-\begin{center}%
-\if #2\empty %
-\else%
-(#2)%durée
+#1\newline% date
+\if #2\empty\else%
+		(#2)% durée
 \fi%
-\end{center}%
 \end{minipage}%
 \hspace{2mm}%
 %
 \begin{minipage}[t]{\textwidth - 2.3cm -2mm}% %
 %
 \begin{minipage}[t]{\textwidth}%
-\textbf{#5, }\vspace{1mm}%intitulé
+\textbf{#5, }\vspace{1mm}% intitulé
 \textit{%
-\if #3\empty %
-\else%
-#3%établissement
-%
-\if #4\empty %
-\else
-,\linebreak[2]% 
+\if #3\empty\else%
+	#3%établissement
+	\if #4\empty\else%
+		,\linebreak[2]% 
+	\fi%
 \fi%
-\fi%
-\if #4\empty %
-\else%
-#4.%lieu
+\if #4\empty\else%
+	#4.%lieu
 \fi%
 }%
 \end{minipage}%
@@ -196,29 +187,64 @@
 %#5=titre3
 %#6=text3
 \newcommand{\tripleitemiseavecTitre}[6]{\par%
-% bloc 1
-\begin{minipage}[t]{.325\textwidth}%
-\if #2\empty% si text1 n'est pas vide
-\else%
-\noindent\souspartie[large]{#1}[1pt]%
-{#2}%
-\fi%
-\end{minipage}\hfill %
+% titres 
+\begin{minipage}[t]{\textwidth}%
+%bloc 1
+	\begin{minipage}[t]{.325\textwidth}%
+	\if #1\empty\else%
+	\noindent\souspartie[large]{#1}[1pt]%
+	\fi%
+	\end{minipage}\hfill %
 % bloc 2
-\noindent\begin{minipage}[t]{.325\textwidth}%
-\if #4\empty% si text1 n'est pas vide
-\else%
-\noindent\souspartie[large]{#3}[1pt]%
-{#4}%
-\fi%
-\end{minipage}\hfill%
+	\noindent\begin{minipage}[t]{.325\textwidth}%
+	\if #3\empty\else%
+	\noindent\souspartie[large]{#3}[1pt]%
+	\fi%
+	\end{minipage}\hfill%
 % bloc 3
-\noindent\begin{minipage}[t]{.325\textwidth}%
-\if #6\empty% si text1 n'est pas vide
-\else%
-\noindent\souspartie[large]{#5}[1pt]%
-{#6}%
-\fi%
-\end{minipage}\hfill%
+	\noindent\begin{minipage}[t]{.325\textwidth}%
+	\if #5\empty\else%
+	\noindent\souspartie[large]{#5}[1pt]%
+	\fi%
+	\end{minipage}\hfill%
+\end{minipage}%
 \newline%
+%\vspace{3mm}
+% corps de textes
+\begin{minipage}[t]{\textwidth}%
+\hfill %
+% bloc 1
+
+	\begin{minipage}[t]{.322\textwidth}%
+	{#2}%
+	\end{minipage}%
+\hfill %\vline \hfill %
+% bloc 2
+	\begin{minipage}[t]{.322\textwidth}%
+	{#4}%
+	\end{minipage}%
+\hfill %\vline \hfill %
+% bloc 3
+	\begin{minipage}[t]{.322\textwidth}%
+	{#6}%
+	\end{minipage}\hfill%
+\end{minipage}
+\vspace{3mm}\par\noindent%
+}
+
+
+
+%-----------------------------------------------------------------------------
+%---------- \miniinclude{img} : inclue une image de la taille du texte -------
+%-----------------------------------------------------------------------------
+% Entrées :
+%#1=image a inclure
+\newcommand*{\miniinclude}[1]{%
+  \raisebox{-.3\baselineskip}{%
+    \includegraphics[
+      height=\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
 }
