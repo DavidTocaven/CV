@@ -105,8 +105,7 @@
 \begin{minipage}[t]{\textwidth}%
 \textbf{#5, }\vspace{1mm}% intitulé
 \textit{%
-\if #3\empty\else%
-	#3%établissement
+\if #3\empty\else #3%établissement
 	\if #4\empty\else%
 		,\linebreak[2]% 
 	\fi%
@@ -174,7 +173,7 @@
 \end{minipage}%
 \fi%
 \end{minipage}%
-\newline%
+\par\noindent%
 }
 %----------------------------------------------------------------------------------------------------------------------------------------
 %---------- \\tripleitemiseavecTitre{titre1}{text1}{titre2}{text2}{titre3}{text3}: trois colonnes avec un titre et une description par colonnes-------
@@ -241,7 +240,7 @@
 %#1=image a inclure
 \newcommand*{\miniinclude}[1]{%
   \raisebox{-.3\baselineskip}{%
-    \includegraphics[
+    \includegraphics[scale=•]{•}
       height=\baselineskip,
       width=\baselineskip,
       keepaspectratio,

@@ -58,12 +58,15 @@
 %\newcites{book,misc}{{Books},{Others}}
 \usepackage{enumitem}
 \newcommand{\myitem}{\textbullet}
+
+	\definecolor{darkred}{RGB}{204,0,0}
+
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-
-
+\begin{samepage}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
@@ -73,9 +76,9 @@
 % -----------------------
 \partie{Diplômes}
 % -----------------------
-\diplome{2015 à ce jour}{Master EEA-Ingénierie des Systèmes Temps-Réels}{Université Toulouse III -- Paul Sabatier}{Toulouse} 
-\diplome{2013--2015}{Licence Électronique, Électrotechnique et Automatique}{Université Toulouse III -- Paul Sabatier}{Toulouse}
-\diplome{2010--2013}{Baccalauréat Série Scientifique}{Lycée La Borde Basse}{Castres}
+\diplome{2015 à ce jour}{Master EEA-Ingénierie des Systèmes Temps-Réels}{\textcolor{darkred}{Université Toulouse III -- Paul Sabatier}}{\textcolor{darkred}{Toulouse}} 
+\diplome{2013--2015}{Licence Électronique, Électrotechnique et Automatique}{\textcolor{darkred}{Université Toulouse III -- Paul Sabatier}}{\textcolor{darkred}{Toulouse}}
+\diplome{2010--2013}{Baccalauréat Série Scientifique}{\textcolor{darkred}{Lycée La Borde Basse}}{\textcolor{darkred}{Castres}}
 \end{minipage}\hfill%
 \noindent\begin{minipage}[t]{.51\textwidth}
 % -----------------------
@@ -157,9 +160,7 @@
 }}%
 {Langages :}%
 {%
-	\textbf{Matlab}~\textit{bonnes connaissances}, \textbf{\LaTeX}~\textit{bonnes connaissances}, \textbf{C}~\textit{bonnes connaissances},%
-	\textbf{Assembleur}~\textit{notions}, \textbf{VHDL}~\textit{bonnes bases}, \textbf{ST}~et~\textbf{IL-LIST}~\textit{notions}, %
-	\textbf{Arduino}~\textit{bonnes bases}, \textbf{Java}~\textit{bases}, \textbf{C++}~\textit{notions}.%
+	\textbf{Matlab} \textit{bonnes connaissances}, \textbf{\LaTeX}~\textit{bonnes connaissances}, \textbf{C}~\textit{bonnes connaissances}, 	\textbf{Assembleur}~\textit{notions}, \textbf{VHDL} \textit{bonnes bases}, \textbf{ST}~et~\textbf{IL-LIST}~\textit{notions}, \textbf{Arduino}~\textit{bonnes bases}, \textbf{Java}~\textit{bases}, \textbf{C++}~\textit{notions}.%
 }%
 {Langue et communication}%
 {{%
@@ -197,6 +198,7 @@
 %  \end{itemize}%
 %  }%
 %\end{cvcolumns}
+\end{samepage}
 \end{document}
 
 
