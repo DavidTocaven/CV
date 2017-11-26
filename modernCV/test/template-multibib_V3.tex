@@ -18,7 +18,6 @@
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-
 % adjust the page margins
 \usepackage[scale=0.92]{geometry}
 %\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
@@ -57,6 +56,8 @@
 \usepackage{bclogo}
 \input{newcommands.tex}
 %\newcites{book,misc}{{Books},{Others}}
+\usepackage{enumitem}
+\newcommand{\myitem}{\textbullet}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -98,34 +99,63 @@
 %\begin{cvcolumns}
 %\tripleitemiseavecTitre{coucou}{{\begin{itemize}\item 1 \item 2 \end{itemize}}}{ça}{3 4}{va}{5 6}
 \tripleitemiseavecTitre{Automatique -- Temps continu ou échantillonné}{%
-{\begin{itemize}%
-\item Modélisation: {\small fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.}%
-\item Analyse: {\small fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.}%
-\item Synthèse de commande:  {\small PID, multivariable, robuste, par retour d'état, sur système a retard.}
-\end{itemize}}}{Automatique -- Systèmes à événements discret :}{{\begin{itemize}%
+{\begin{itemize}[label=\myitem]%
+\item \textbf{Modélisation:} {\small fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.}%
+\item \textbf{Analyse:} {\small fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.}%
+\item \textbf{Synthèse de commande:}  {\small PID, multivariable, robuste, par retour d'état, sur système a retard.}
+\end{itemize}}}{Automatique -- Systèmes à événements discret :}{{\begin{itemize}[label=\myitem]%
 		\item Automates,%
 		\item {\small Réseaux de Petri (normaux, stochastiques/temporisés),}%
 		\item {\small Algèbre $(max,+)$,}%
 		\item {\small Modèles DEVS,}%
 		\item {\small Synthèse de commande,}%
 		\item {\small Analyse, simulation, implémentation,}%
-		\item {\small Diagnostiqueur,}%
-		\item {\small Contrôlabilité,}%
+		\item {\small Diagnostiqueur et Contrôlabilité,}%
 		\item {\small Langage,}%
 		\item {\small Commande supervisée,}%
 		\item {\small Mise en \oe uvre logicielle/matérielle}%
 		\end{itemize}}}{Mise en \oe uvre :}{{%
-		\begin{itemize}%
-\item Informatique :\newline%
-{\small Modélisation système (UML, UML2, SysML, systèmes embarqués), orienté objet, parallèle (exclusion mutuelle, synchronisation, thread , multitâches.).}%
-\item Informatique industrielle :\newline%
-{\small 	 DSP \textit{notions}, Micro-contrôleurs \textit{bases},} 
-\item Temps Réel : \newline
-{\small Norme industrielle OSEK/VDX, Ordonnancement, Système d'exploitation temps réel, Vérification d’exigence, Réactivité.}%
-\item Réseaux :\newline%
-{\small Internet \textit{bases}, Network Calculus, CAN, AFDX, Réseaux temps réel.}%
+		\begin{itemize}[label=\myitem]%
+\item \textbf{Informatique : }{\small Modélisation système (UML, UML2, SysML, systèmes embarqués), orienté objet, parallèle (exclusion mutuelle, synchronisation, thread , multitâches.).}%
+\item \textbf{Informatique industrielle : } {\small 	 DSP \textit{notions}, Micro-contrôleurs \textit{bases},} 
+\item \textbf{Temps Réel : }{\small Norme OSEK/VDX, Ordonnancement, RTOS, Vérification d’exigence, Réactivité.}%
+\item \textbf{Réseaux : }{\small Internet \textit{bases}, Network Calculus, CAN, AFDX, Réseaux temps réel.}%
 	\end{itemize}%
 }}%
+	
+%	\item Langages : 
+%		\begin{itemize}
+%		\item 	\textbf{Matlab} \textit{bonnes connaissances}, 
+%		\item \textbf{\LaTeX}  \textit{bonnes connaissances},
+%		\item \textbf{C} \textit{bonnes connaissances}, 
+%		\item \textit{Assembleur} \textit{notions},
+%		\item \textbf{VHDL} \textit{bonnes bases}, 
+%		\item \textbf{ST} et \textbf{IL-LIST} \textit{notions}, 
+%		\item \textbf{Arduino} \textit{bonnes bases},
+%		\item \textbf{Java} \textit{bases}, 		
+%		\item \textbf{C++} \textit{notions}.
+%		\end{itemize}
+%		
+%	\item Systèmes d'exploitation :
+%		\begin{itemize}
+%		\item \textbf{Linux} \textit{bonnes bases},
+%		\item \textbf{Trampoline RTOS} \textit{bases}, 
+%		\item \textbf{Windows} \textit{bonnes bases},
+%		\item \textbf{Mac OS} \textit{bonnes bases}.
+%		\end{itemize}
+%	\end{itemize}		
+%
+%\end{itemize}
+%}
+\tripleitemiseavecTitre{Informatique et Bureautique: }{{\begin{itemize}[label=\myitem]%
+\item \textbf{Logiciels: } Spécifiques automatique : {\small \textbf{Matlab}: Simulink, POO, GUI, RTW}, Spécifique Informatique : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}, Bureautique : {\small \textbf{\TeX maker}, \textbf{Suites Microsoft office}, \textbf{Libre Office}.}\end{itemize}}}%
+{ça}{3 4}%
+{Langue et communication}{{\begin{itemize}[label=\myitem]%
+\item \textbf{Langue: } {\small Anglais B2}%
+\item \textbf{Communication: } {\small orale et écrite en Français et en Anglais.} %
+\item \textbf{Gestion et management de projet: } {\small Gant, WBS, RACI, Agile.}%
+\end{itemize}%
+}}
 % -----------------------
 \partie{Centres d'intérêts :}
 % -----------------------
