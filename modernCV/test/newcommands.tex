@@ -14,6 +14,7 @@
 \usepackage[french]{babel}
 \usepackage{xargs}% pour avoir plusieurs attribut qui ont des valeurs par defaut
 \usepackage{fdsymbol}% des symbôles maths 
+\usepackage{calc}
 % -----------------------------------------------------
 % 				Nouvelles Commandes
 % -----------------------------------------------------
@@ -58,27 +59,29 @@
 %#2=nom du diplôme
 %#3=établissement
 %#4=lieu
+
+
 \newcommand{\diplome}[4]{\par%
-\begin{minipage}[t]{2.3cm}%    la date
+\fbox{\begin{minipage}[t]{2.3cm}%    la date
 \begin{flushleft}%
 #1%
 \end{flushleft}%
-\end{minipage}%
+\end{minipage}}%
 \hspace{2mm}%
 %
-\begin{minipage}[t]{\textwidth - 2.3cm -2mm}%   nom du diplôme, établissement et lieu
+\fbox{\begin{minipage}[t]{.98\textwidth - 2.7cm}%   nom du diplôme, établissement et lieu
 %
-\begin{minipage}[t]{\textwidth}%  Non du dipôme
+\fbox{\begin{minipage}[t]{.98\textwidth}%  Non du dipôme
 \textbf{#2,}\vspace{1mm}%
-\end{minipage}%
+\end{minipage}}%
 \newline%
-\begin{minipage}[t]{\textwidth}%    etablissement et lieu
+\fbox{\begin{minipage}[t]{.98\textwidth}%    etablissement et lieu
 \begin{flushleft}%
 \textit{#3,\linebreak[2] #4.}%
 \end{flushleft}%
-\end{minipage}%
+\end{minipage}}%
 %
-\end{minipage}%
+\end{minipage}}%
 \newline%
 }
 %-------------------------------------------------------------------------------------------------------------------------------------
