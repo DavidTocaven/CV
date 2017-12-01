@@ -22,6 +22,7 @@
 \usepackage[scale=0.92]{geometry}
 %\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{graphicx}
 
 % personal data
 \name{David}{\textbf{TOCAVEN}}
@@ -66,7 +67,7 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-\begin{samepage}
+%\begin{samepage}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
@@ -75,12 +76,10 @@
 \noindent\fbox{\begin{minipage}[t]{.72\textwidth}%
 \diplome{2015 à ce jour}{Master EEA-Ingénierie des Systèmes Temps-Réels}{\textcolor{darkred}{Université Toulouse III -- Paul Sabatier}}{\textcolor{darkred}{Toulouse}}% 
 \diplome{2013--2015}{Licence Électronique, Électrotechnique et Automatique}{\textcolor{darkred}{Université Toulouse III -- Paul Sabatier}}{\textcolor{darkred}{Toulouse}}%
-\end{minipage}}\vline\hspace{2mm}%
-%
-\fbox{\begin{minipage}[t]{.2\textwidth}%
-%\includegraphics[width=.99\textwidth]{./logo_ups.png}
-\end{minipage}}%
-
+\end{minipage}} %\vline\hspace{2mm}%
+\noindent\fbox{\begin{minipage}[t]{.22\textwidth}
+\fbox{\includegraphics[width=.95\textwidth]{./logo_ups.png}}
+\end{minipage}}\hfill%
 \diplome{2010--2013}{Baccalauréat Série Scientifique}{\textcolor{darkred}{Lycée La Borde Basse}}{\textcolor{darkred}{Castres}}
 % -----------------------
 \partie{Expériences}
@@ -198,7 +197,7 @@
 %  \end{itemize}%
 %  }%
 %\end{cvcolumns}
-\end{samepage}
+%\end{samepage}
 \end{document}
 
 
