@@ -40,7 +40,7 @@
 %\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
 %\social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
 \extrainfo{Français}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[64pt][0.4pt]{picture_BLANCHE}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
@@ -67,9 +67,6 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{samepage}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
 
 \makecvtitle
 %\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
@@ -86,16 +83,19 @@
 \includegraphics[width=.95\textwidth]{./logo_ups.png}%
 \end{minipage}\hfill%
 \end{minipage}
-
-
+%
 \vspace{2mm}\par\diplome{2010--2013}{Baccalauréat Série Scientifique}{\textcolor{darkred}{Lycée La Borde Basse}}{\textcolor{darkred}{Castres}}
-% -----------------------
+
 \vspace{2cm}
+%
+% -----------------------
 \partie{Expériences}
+% -----------------------
+%
 \vspace{8mm}
 
-% -----------------------
 %\experience{date}{durée}{établissement}{lieu}{intitulé}{Points intéressants}
+%
 \begin{minipage}[t]{\textwidth}
 \begin{minipage}[t]{.8\textwidth}
 \experience{2016--2017}{4 semaines}{{\textcolor{darkred}{LAAS-CNRS}}}{{\textcolor{darkred}{Toulouse}}}{Stage}{\begin{itemize}[label=\myitem]%
@@ -116,13 +116,25 @@
 \item Formalisme automate,
 \item Matlab.
 \end{itemize}}
+%
 \vspace{4mm}
+%
+\begin{minipage}[t]{\textwidth}
+\begin{minipage}[t]{.8\textwidth}
 \experience{2016--2017}{5 semaines}{{\textcolor{darkred}{LAPLACE}}}{{\textcolor{darkred}{Toulouse}}}{Stage}{\begin{itemize}[label=\myitem]%
 \item Optique et traitement~d’image, 
 \item Matlab et \LaTeX, 
 \item Découverte du monde de la recherche.
 \end{itemize}}
+\end{minipage}\hfill%
+\begin{minipage}[t]{.2\textwidth}
+\vspace{0mm}
+\includegraphics[height=1cm]{./LAPLACE_logo.png}
+\end{minipage}
+\end{minipage}
+
 \vspace{4mm}
+
 \experience{2016 à aujourd'hui}{}{}{{\textcolor{darkred}{Toulouse}}}{Cours particulier}{\begin{itemize}[label=\myitem]%
 \item Pédagogie, 
 \item Mathématique et automatique, 
@@ -203,29 +215,7 @@
 %\tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3}
 \tripleitemise[\bcbook]{Veille scientifique}[\bcfleur]{Voyages}[\bcvelo]{Bricolage (remorque vélo, électronique, …)}
 \tripleitemise{Bénévole IFAC 2017}{}{\noindent Président de l'association étudiante EEA Toulouse (2016--2017)}
-%  \cvcolumn{Automatique -- Temps continu ou échantillonné:}{%
-%  \begin{itemize}
-%		\item Modélisation:\newline fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.
-%		\item Analyse:\newline fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.
-%		\item Synthèse de commande:\newline  PID, multivariable, robuste, par retour d'état, sur système a retard.
-%	  \end{itemize}%
-%  }%
-%    \cvcolumn{}{%
-%  \begin{itemize}%
-%  \item Person%
-%  \item Person% 
-%  \item Person%
-%  \end{itemize}%
-%  }%
-%    \cvcolumn{}{%
-%  \begin{itemize}%
-%  \item Person%
-%  \item Person% 
-%  \item Person%
-%  \end{itemize}%
-%  }%
-%\end{cvcolumns}
-%\end{samepage}
+%
 \end{document}
 
 
