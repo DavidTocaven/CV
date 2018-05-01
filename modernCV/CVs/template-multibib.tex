@@ -1,0 +1,177 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{green}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\usepackage[french]{babel}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.92]{geometry}
+%\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{David}{\textbf{TOCAVEN}}
+\title{\huge Étudiant master automatique}                               % optional, remove / comment the line if not wanted
+\address{149 rue du Faubourg Bonnefoy}{31500 Toulouse}%{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{(+33)6 45 52 25 72}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{david.tocaven@univ-tlse3.fr}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+\usepackage{pifont}
+\usepackage{marvosym}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+%\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
+\begin{minipage}[t]{.6\textwidth}
+\section{Diplômes}
+\cventry{2015 à ce jour}{Master EEA-ISTR}{Université Toulouse III-Paul Sabatier}{Toulouse}{\newline \textit{Ingénierie des Systèmes Temps-Réels}}{}  % arguments 3 to 6 can be left empty
+\cventry{2013--2015}{Licence EEA}{Université Toulouse III-Paul Sabatier}{Toulouse}{\newline\textit{Électronique, Électrotechnique et Automatique}}{}
+\cventry{2013}{Baccalauréat Série Scientifique}{Lycée La Borde Basse}{Castres}{\newline\textit{Spécialité Informatique et Science Numérique}}{}
+\end{minipage}\hfill
+\begin{minipage}[t]{.28\textwidth}
+\section{Langues}
+\cvitemwithcomment{Français}{Langue maternelle}{}
+\cvitemwithcomment{Anglais}{$\bullet \bullet \bullet \circ \circ$ B2}{}
+\cvitemwithcomment{Espagnol}{$\bullet \circ \circ \circ \circ$}{}
+\section{Loisirs}
+\begin{itemize}
+\item[\ding{40}] Voyages
+\item[\Bicycle] Bricolage (remorque vélo, électronique, …)
+\end{itemize}
+\end{minipage}
+
+%\columnbreak
+%\end{multicols}
+
+\section{Expériences}
+%\subsection{Stage}
+\cventry{2017}{Stage}{LAAS-CNRS : Laboratoire d'analyse et d'architecture des systèmes}{Toulouse}{}{Modélisation de SED (Systèmes à Événements Discrets). %\newline
+Stage dans le groupe ISI : Ingénierie Système et Intégration.
+\centerline{(Modèle DEVS, temps discrets, événements discrets, modélisation.)}}
+\vspace{1mm}
+\cventry{2016-2017}{Projet master}{Université Toulouse III-Paul Sabatier}{Toulouse}{}{Modélisation, Analyse et Simulation des S.E.D non déterministes. %\newline
+Projet de recherche de 1ère année de master.
+\centerline{(Méthode scientifique, automates, gestion de projet et travail de groupe, Matlab.)}}
+\vspace{1mm}
+\cventry{2016-2017}{Stage}{LAPLACE : Laboratoire plasma et conversion d’énergie}{Toulouse}{}{Visualisation et quantification des échanges thermiques par convection sur un dissipateur pour sources d’éclairages à LED, %\newline
+Dans le groupe LM : Lumière et Matière.
+\centerline{(Optique, traitement d’image, thermique, Matlab, LaTex, découverte du monde de la recherche)}}
+\vspace{1mm}
+\cventry{2016 à aujourd'hui}{Cours particulier}{}{Toulouse}{}{Cours de Mathématique, de physique et d’automatique à des lycéens et des étudiants en licences. 
+\centerline{(Pédagogie, mathématique, automatique, visualisation)}}
+
+\section{Compétences}
+
+\cvitem{\textbf{Langages et logiciels :}}{\textbf{Matlab} \textit{bonnes connaissances}, \textbf{VHDL} \textit{bonnes bases}, \textbf{ST} et \textbf{IL} \textit{notions}, \textbf{Trampoline RTOS}, \textbf{DESUMA} : Simulation et analyse d’automates, \textbf{Tina} : Simulation et analyse de réseau de Petri, \textbf{ProDevs} : Simulation et implémentation de modèle \textbf{DEVS}, Java : Eclipse \textit{bases}, \textbf{Arduino} \textit{bonnes bases}, \textbf{C} \textit{bonne connaissances}, \textbf{C++} \textit{notions}.}
+
+\cvdoubleitem{\textbf{Documents:}}{\textbf{LaTex}, Suites Microsoft office, Libre Office.}{\textbf{Images:}}{Gimp, Inkscape \textit{bonnes bases}.}
+\cvdoubleitem{\textbf{Modélisation système:}}{UML, UML2 : MagicDraw, Modelio}{\textbf{Gestion de projet:}}{Gant, WBS, RACI, Agile.}
+\cvdoubleitem{\textbf{Versionnage et documentation }}{Git, GitHub, Doxygen.}{\textbf{Systèmes d’exploitation:}}{Linux, Windows, Mac.}
+
+\cvdoubleitem{\textbf{Automatique continue}}{Synthèse d'une loi de commande continue ou échantillonnée, espace d'état, commande robuste, système linéaire multivariable, analyse de performance. }
+{\textbf{Système à événement discrets}}{Automates, réseaux de Petri, synthèse de commande, analyse, simulation, implémentation, diagnostiqueur, langage, commande supervisée}
+
+\cvdoubleitem{\textbf{Temps Réel}}{Réseaux temps réel, ordonnancement, système d'exploitation temps réel, vérification d’exigence, réactivité }
+{\textbf{}}{}
+
+%\section{Computer skills}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+%
+%\section{Interests}
+%\cvitem{hobby 1}{Description}
+%\cvitem{hobby 2}{Description}
+%\cvitem{hobby 3}{Description}
+%
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+%
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+%
+%% Publications from a BibTeX file without multibib
+%%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%%\nocite{*}
+%%\bibliographystyle{plain}
+%%\bibliography{publications}                       % 'publications' is the name of a BibTeX file
+%
+%% Publications from a BibTeX file using the multibib package
+%%\section{Publications}
+%%\nocitebook{book1,book2}
+%%\bibliographystylebook{plain}
+%%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%%\nocitemisc{misc1,misc2,misc3}
+%%\bibliographystylemisc{plain}
+%%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+%
+%\clearpage
+%%-----       letter       ---------------------------------------------------------
+%% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.

@@ -1,0 +1,203 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{green}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\usepackage[french]{babel}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+% adjust the page margins
+\usepackage[scale=0.92]{geometry}
+%\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{David}{\textbf{TOCAVEN}}
+\title{\huge Automatic master's degree student} % fr : Étudiant master automatique                               % optional, remove / comment the line if not wanted
+\address{149 rue du Faubourg Bonnefoy}{31500 Toulouse}%{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{(+33)6 45 52 25 72}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{david.tocaven@univ-tlse3.fr}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
+%\social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+\extrainfo{French}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{photoID}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+%\usepackage{pifont}
+%\usepackage{marvosym}
+\usepackage{bclogo}
+\input{../newcommands.tex}
+%\newcites{book,misc}{{Books},{Others}}
+\usepackage{enumitem}
+\newcommand{\myitem}{\textbullet}
+
+	\definecolor{darkred}{RGB}{204,0,0}
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\begin{samepage}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+%\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
+\vspace{-1cm}
+\noindent\begin{minipage}[t]{.44\textwidth}
+% -----------------------
+\partie{Education}% fr : Diplômes 
+% -----------------------
+\diplome{2015 to present}{EEA master's degree}%Master EEA-Ingénierie des Systèmes Temps-Réels
+{\textcolor{darkred}{Paul Sabatier University}}%Université Toulouse III -- Paul Sabatier
+{\textcolor{darkred}{Toulouse}}%Toulouse
+%
+\diplome{2013--2015}{Electronic, Electronic engineering and automatic Bachelor's degree}%Licence Électronique, Électrotechnique et Automatique
+{\textcolor{darkred}{Paul Sabatier University}}%Université Toulouse III -- Paul Sabatier
+{\textcolor{darkred}{Toulouse}}%Toulouse
+%
+\diplome{2010--2013}{Scientific stream Baccalaureate \\ \textmd{ \small (equivalent to Hight School diploma)}}%Baccalauréat Série Scientifique
+{\textcolor{darkred}{La Borde Basse Hight School}}%Lycée La Borde Basse
+{\textcolor{darkred}{Castres}}%Castres
+\end{minipage}\hfill%
+\noindent\begin{minipage}[t]{.51\textwidth}
+% -----------------------
+\partie{Work Experience}
+% -----------------------
+%\experience{date}{durée}{établissement}{lieu}{intitulé}{Points intéressants}
+\experience{Apr. to Aug. 2018}{5 months}{LAAS-CNRS}{Toulouse}%
+{Research internship}%Stage de recherche 
+{Active diagnostic, hybrid system, RRA, observer, parity space}%diagnostic actif, système hybride, RRA, observer, parity space
+\experience{2016--2017}{4 weeks}{LAAS-CNRS}{Toulouse}%
+{Internship}%Stage
+{DEVS model, discrete time, discrete events, modelling}%Modèle DEVS, temps~discrets, événements~discrets, modélisation.
+
+
+\experience{2016--2017}{6 months}%
+{Paul Sabatier University}%Université Toulouse III -- Paul Sabatier
+{Toulouse}%Toulouse
+{Master project}%Projet master
+{Scientific method, automaton, project management, Matlab}%Méthode scientifique, automates, gestion~de~projet, Matlab
+
+\experience{2016--2017}{5 weeks}{LAPLACE}{Toulouse}%
+{Internship}%Stage
+{Optic, digital image processing, thermal science, Matlab, \LaTeX , Discovering the research world}%Optique, traitement~d’image, thermique, Matlab, \LaTeX, découverte du monde de la recherche.
+
+\experience{2016 to present}{}{}{Toulouse}%
+{Private lesson}%Cours particulier
+{Teaching, mathematics, automatic, visualization}%Pédagogie, mathématique, automatique, visualisation
+\end{minipage}
+
+
+% -----------------------
+\partie{Compétences}
+% -----------------------
+
+%\begin{cvcolumns}
+%\tripleitemiseavecTitre{coucou}{{\begin{itemize}\item 1 \item 2 \end{itemize}}}{ça}{3 4}{va}{5 6}
+\tripleitemiseavecTitre{Automatique -- Temps continu ou échantillonné}{%
+{\begin{itemize}[label=\myitem]%
+\item \textbf{Modélisation:} {\small fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.}%
+\item \textbf{Analyse:} {\small fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.}%
+\item \textbf{Synthèse de commande:}  {\small PID, multivariable, robuste, par retour d'état, sur système a retard.}
+\end{itemize}}}{Automatique -- Systèmes à événements discret :}{{\begin{itemize}[label=\myitem]%
+		\item Automates,%
+		\item {\small Réseaux de Petri (normaux, stochastiques/temporisés),}%
+		\item {\small Algèbre $(max,+)$,}%
+		\item {\small Modèles DEVS,}%
+		\item {\small Synthèse de commande,}%
+		\item {\small Analyse, simulation, implémentation,}%
+		\item {\small Diagnostiqueur et Contrôlabilité,}%
+		\item {\small Langage,}%
+		\item {\small Commande supervisée,}%
+%		\item {\small Mise en \oe uvre logicielle/matérielle}%
+		\end{itemize}}}{Mise en \oe uvre :}{{%
+		\begin{itemize}[label=\myitem]%
+\item \textbf{Informatique : }{\small Modélisation système (UML, UML2, SysML, systèmes embarqués), orienté objet, parallèle (exclusion mutuelle, synchronisation, thread , multitâches.).}%
+\item \textbf{Informatique industrielle : } {\small 	 DSP \textit{notions}, Micro-contrôleurs \textit{bases},} 
+\item \textbf{Temps Réel : }{\small Norme OSEK/VDX, Ordonnancement, RTOS, Vérification d’exigence, Réactivité.}%
+\item \textbf{Réseaux : }{\small Internet \textit{bases}, Network Calculus, CAN, AFDX, Réseaux temps réel.}%
+	\end{itemize}%
+}}%
+	
+%	\item Langages : 
+%		\begin{itemize}
+%		\item 	\textbf{Matlab} \textit{bonnes connaissances}, 
+%		\item \textbf{\LaTeX}  \textit{bonnes connaissances},
+%		\item \textbf{C} \textit{bonnes connaissances}, 
+%		\item \textit{Assembleur} \textit{notions},
+%		\item \textbf{VHDL} \textit{bonnes bases}, 
+%		\item \textbf{ST} et \textbf{IL-LIST} \textit{notions}, 
+%		\item \textbf{Arduino} \textit{bonnes bases},
+%		\item \textbf{Java} \textit{bases}, 		
+%		\item \textbf{C++} \textit{notions}.
+%		\end{itemize}
+%		
+%	\item Systèmes d'exploitation :
+%		\begin{itemize}
+%		\item \textbf{Linux} \textit{bonnes bases},
+%		\item \textbf{Trampoline RTOS} \textit{bases}, 
+%		\item \textbf{Windows} \textit{bonnes bases},
+%		\item \textbf{Mac OS} \textit{bonnes bases}.
+%		\end{itemize}
+%	\end{itemize}		
+%
+%\end{itemize}
+%}
+\tripleitemiseavecTitre%
+{Logiciels :}%
+{{%
+	Spécifiques automatique : {\small \textbf{Matlab}: Simulink, POO, GUI, RTW}.\\
+	Spécifique Informatique : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}.\\
+	Bureautique : {\small \textbf{\TeX maker}, \textbf{Suites Microsoft office}, \textbf{Libre Office}.}%
+}}%
+{Langages :}%
+{%
+	\textbf{Matlab} \textit{bonnes connaissances}, \textbf{\LaTeX}~\textit{bonnes connaissances}, \textbf{C}~\textit{bonnes connaissances}, 	\textbf{Assembleur}~\textit{notions}, \textbf{VHDL} \textit{bonnes bases}, \textbf{ST}~et~\textbf{IL-LIST}~\textit{notions}, \textbf{Arduino}~\textit{bonnes bases}, \textbf{Java}~\textit{bases}, \textbf{C++}~\textit{notions}.%
+}%
+{Langue et communication}%
+{{%
+	\begin{itemize}[label=\myitem]%
+	\item \textbf{Langue: } {\small Anglais B2}%
+	\item \textbf{Communication: } {\small orale et écrite en Français et en Anglais.} %
+	\item \textbf{Gestion et management de projet: } {\small Gantt, WBS, RACI, Agile.}%
+	\end{itemize}%
+}}
+% -----------------------
+\partie{Centres d'intérêts :}
+% -----------------------
+%\tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3}
+\tripleitemise[\bcbook]{Veille scientifique}[\bcfleur]{Voyages}[\bcvelo]{Bricolage (remorque vélo, électronique, …)}%
+\end{samepage}%
+\end{document}
+
+
+%% end of file `template.tex'.
