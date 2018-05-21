@@ -2,9 +2,11 @@
 *.log
 
 modernCV/test/brouillon\.synctex\.gz
-
+/modernCV/moderncv-master/*
+modernCV/moderncv_userguide.v2.pdf
 modernCV/test/template-multibib_V3\.synctex\.gz
 
 modernCV/test/template-multibib\.synctex\.gz
 
 *.gz
+
