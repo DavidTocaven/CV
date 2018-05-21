@@ -19,7 +19,7 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 % adjust the page margins
-\usepackage[scale=0.92]{geometry}
+\usepackage[scale=0.92,margin=9mm]{geometry}
 %\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -71,20 +71,21 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 %\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
-\vspace{-1cm}
-\noindent\begin{minipage}[t]{.44\textwidth}
+\vspace{-1cm}%
+\noindent\begin{minipage}[t]{.44\textwidth}%
 % -----------------------
+\vspace*{-3mm}%
 \partie{Education}% fr : Diplômes 
 % -----------------------
-\diplome{2015 to present}{EEA master's degree}%Master EEA-Ingénierie des Systèmes Temps-Réels
+\diplome{2015 -- 2017}{EEA master's degree}%Master EEA-Ingénierie des Systèmes Temps-Réels
 {\textcolor{darkred}{Paul Sabatier University}}%Université Toulouse III -- Paul Sabatier
 {\textcolor{darkred}{Toulouse}}%Toulouse
 %
-\diplome{2013--2015}{Electronic, Electronic engineering and automatic Bachelor's degree}%Licence Électronique, Électrotechnique et Automatique
+\diplome{2013 -- 2015}{Electronic, Electronic engineering and automatic Bachelor's degree}%Licence Électronique, Électrotechnique et Automatique
 {\textcolor{darkred}{Paul Sabatier University}}%Université Toulouse III -- Paul Sabatier
 {\textcolor{darkred}{Toulouse}}%Toulouse
 %
-\diplome{2010--2013}{Scientific stream Baccalaureate \\ \textmd{ \small (equivalent to Hight School diploma)}}%Baccalauréat Série Scientifique
+\diplome{2010 -- 2013}{Scientific stream Baccalaureate \\ \textmd{ \small (equivalent to Hight School diploma)}}%Baccalauréat Série Scientifique
 {\textcolor{darkred}{La Borde Basse Hight School}}%Lycée La Borde Basse
 {\textcolor{darkred}{Castres}}%Castres
 \end{minipage}\hfill%
@@ -100,52 +101,47 @@
 {Internship}%Stage
 {DEVS model, discrete time, discrete events, modelling}%Modèle DEVS, temps~discrets, événements~discrets, modélisation.
 
-
-\experience{2016--2017}{6 months}%
+\experience{2016 -- 2017}{6 months}%
 {Paul Sabatier University}%Université Toulouse III -- Paul Sabatier
 {Toulouse}%Toulouse
 {Master project}%Projet master
 {Scientific method, automaton, project management, Matlab}%Méthode scientifique, automates, gestion~de~projet, Matlab
 
-\experience{2016--2017}{5 weeks}{LAPLACE}{Toulouse}%
+\experience{2016 -- 2017}{5 weeks}{LAPLACE}{Toulouse}%
 {Internship}%Stage
 {Optic, digital image processing, thermal science, Matlab, \LaTeX , Discovering the research world}%Optique, traitement~d’image, thermique, Matlab, \LaTeX, découverte du monde de la recherche.
 
 \experience{2016 to present}{}{}{Toulouse}%
 {Private lesson}%Cours particulier
 {Teaching, mathematics, automatic, visualization}%Pédagogie, mathématique, automatique, visualisation
-\end{minipage}
-
-
+\end{minipage}%
+\vspace*{-5mm}% -----------------------
+\partie{Skills}%
 % -----------------------
-\partie{Skills}
-% -----------------------
-
 %\begin{cvcolumns}
 %\tripleitemiseavecTitre{coucou}{{\begin{itemize}\item 1 \item 2 \end{itemize}}}{ça}{3 4}{va}{5 6}
 \tripleitemiseavecTitre{Automatic control -- discrete and continuous time}%Automatique -- Temps continu ou échantillonné
 {%
 {\begin{itemize}[label=\myitem]%
 \item \textbf{Modelling: }%Modélisation
- {\small frequency, state space, linear and non linear, linear multiple input-output, of observer, uncertain, of late system.}%fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.
+ {\small State space, linear and non linear, linear multiple input-output, uncertain, time delays system.}%fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.
 % 
 \item \textbf{Analysis: }%Analyse:
-{\small frequency, Lyapunov theory, performance, linear and non-linear system, uncertain system, robustness, stability of late system.}%fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.
+{\small frequency, temporal (linear and non-linear), Lyapunov theory, performance, uncertain system, robustness, stability of times delays system.}%fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.
 \item \textbf{Control: }%Synthèse de commande:
-{\small PID, multiple input-output, robust, Full state feedback, late system}%PID, multivariable, robuste, par retour d'état, sur système a retard.
+{\small PID, multiple input-output, robust, Observer based state feedback, late system}%PID, multivariable, robuste, par retour d'état, sur système a retard.
 \end{itemize}}}{Automatic control -- Discrete events systems}%Automatique -- Systèmes à événements discret :
 {{\begin{itemize}[label=\myitem]%
 		\item Automaton,%Automates
 		\item {\small Petri network (standard, stochastic, timed),}%Réseaux de Petri (normaux, stochastiques/temporisés),
 		\item {\small $(max,+)$ algebra,}%Algèbre $(max,+)$,
 		\item {\small DEVS models,}%Modèles DEVS
-		\item {\small control}%Synthèse de commande,
+		\item {\small control and controllability,}%Synthèse de commande et contrôlabilité,
 		\item {\small Analysis, simulation, implementation,}%Analyse, simulation, implémentation,
-		\item {\small Diagnosers and controllability,}%Diagnostiqueur et Contrôlabilité,
 		\item {\small Language,}%Langage,
-		\item {\small Supervised control,}%Commande supervisée,
+		\item {\small Supervised control and diagnosers.}%Commande supervisée et diagnostiqueur,
 %		\item {\small Mise en \oe uvre logicielle/matérielle}%
-		\end{itemize}}}{Implementation :}%Mise en \oe uvre :
+		\end{itemize}}}{Implementation}%Mise en \oe uvre :
 {{%
 		\begin{itemize}[label=\myitem]%
 \item \textbf{Computer science : }%Informatique : 
@@ -184,27 +180,27 @@
 %\end{itemize}
 %}
 \tripleitemiseavecTitre%
-{Software skills :}%Logiciels :
+{Software skills}%Logiciels :
 {{%
-	For automatic {\small \textbf{Matlab}: Simulink, OOP, GUI, RTW}.\\ %Spécifiques automatique : {\small \textbf{Matlab}: Simulink, POO, GUI, RTW}.
+	For automatic : {\small \textbf{Matlab}: Simulink, OOP, GUI, RTW}.\\ %Spécifiques automatique : {\small \textbf{Matlab}: Simulink, POO, GUI, RTW}.
 	For computer science : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}.\\%Spécifique Informatique : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}.
 	Office software : {\small \textbf{\TeX maker}, \textbf{Microsoft office suite}, \textbf{free Office suite}.}%Bureautique : {\small \textbf{\TeX maker}, \textbf{Suites Microsoft office}, \textbf{Libre Office}.
 }}%
-{Languages :}%Langages :
+{Languages}%Langages :
 {%
 	\textbf{Matlab} \textit{good knowledge}, \textbf{\LaTeX}~\textit{good knowledge}, \textbf{C}~\textit{good knowledge}, 	\textbf{Assembler}~\textit{notion}, \textbf{VHDL} \textit{good foundation}, \textbf{ST}~and~\textbf{IL-LIST}~\textit{notion}, \textbf{Arduino}~\textit{good foundation}, \textbf{Java}~\textit{basics}, \textbf{C++}~\textit{notion}.%
 }%	\textbf{Matlab} \textit{bonnes connaissances}, \textbf{\LaTeX}~\textit{bonnes connaissances}, \textbf{C}~\textit{bonnes connaissances}, 	\textbf{Assembleur}~\textit{notions}, \textbf{VHDL} \textit{bonnes bases}, \textbf{ST}~et~\textbf{IL-LIST}~\textit{notions}, \textbf{Arduino}~\textit{bonnes bases}, \textbf{Java}~\textit{bases}, \textbf{C++}~\textit{notions}.%
-{Language and communication skills : }%Langue et communication
+{Language and communication skills}%Langue et communication
 {{%
 	\begin{itemize}[label=\myitem]%
 	\item \textbf{Langue: } {\small French (mother tongue),  English}%{Langue: } {\small Anglais B2}%
 	\item \textbf{Communication: } {\small oral and written in French and English.} %{Communication: } {\small orale et écrite en Français et en Anglais.}
 	\item \textbf{Project management: } {\small Gantt, WBS, RACI, Agile.}%{Gestion et management de projet: } {\small Gantt, WBS, RACI, Agile.}
 	\end{itemize}%
-}}
-% -----------------------
-\partie{Personal interests : }%Centres d'intérêts :
-% -----------------------
+}}%
+\vspace*{-8mm}% -----------------------
+\partie{Personal interests}%Centres d'intérêts :
+%\vspace*{-3mm}% -----------------------
 %\tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3}
 \tripleitemise[\bcbook]{scientific watch}[\bcfleur]{Travels}[\bcvelo]{Do-it-yourself (bike trailer, electronic, …)}%{Veille scientifique}[\bcfleur]{Voyages}[\bcvelo]{Bricolage (remorque vélo, électronique, …)}
 \end{samepage}%

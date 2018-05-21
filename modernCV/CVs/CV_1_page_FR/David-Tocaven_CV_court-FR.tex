@@ -19,7 +19,7 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 % adjust the page margins
-\usepackage[scale=0.92]{geometry}
+\usepackage[scale=0.92,margin=9mm]{geometry}
 %\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -38,7 +38,7 @@
 \social[github]{DavidTocaven}                               % optional, remove / comment the line if not wanted
 %\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
 %\social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
-\extrainfo{French}                 % optional, remove / comment the line if not wanted
+\extrainfo{Français}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{photoID}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
@@ -71,20 +71,20 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 %\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
-\vspace{-1cm}
-\noindent\begin{minipage}[t]{.44\textwidth}
-% -----------------------
+\vspace{-1cm}%
+\noindent\begin{minipage}[t]{.44\textwidth}%
+\vspace*{-3mm}% -----------------------
 \partie{Diplômes}% fr : 
 % -----------------------
-\diplome{2015 à aujourd'hui}{Master EEA-Ingénierie des Systèmes Temps-Réels}
+\diplome{2015 -- 2017}{Master EEA-Ingénierie des Systèmes Temps-Réels}
 {\textcolor{darkred}{Université Toulouse III -- Paul Sabatier}}
 {\textcolor{darkred}{Toulouse}}%Toulouse
 %
-\diplome{2013--2015}{Licence Électronique, Électrotechnique et Automatique}
+\diplome{2013 -- 2015}{Licence Électronique, Électrotechnique et Automatique}
 {\textcolor{darkred}{Université Toulouse III -- Paul Sabatier}}
 {\textcolor{darkred}{Toulouse}}%Toulouse
 %
-\diplome{2010--2013}{Baccalauréat Série Scientifique}
+\diplome{2010 -- 2013}{Baccalauréat Série Scientifique}
 {\textcolor{darkred}{Lycée La Borde Basse}}
 {\textcolor{darkred}{Castres}}%Castres
 \end{minipage}\hfill%
@@ -101,50 +101,45 @@
 {Modèle DEVS, temps~discrets, événements~discrets, modélisation.}
 
 
-\experience{2016--2017}{6 mois}%
+\experience{2016 -- 2017}{6 mois}%
 {Université Toulouse III -- Paul Sabatier}
 {Toulouse}%Toulouse
 {Projet master}%
 {Méthode scientifique, automates, gestion~de~projet, Matlab}
 
-\experience{2016--2017}{5 semaines}{LAPLACE}{Toulouse}%
+\experience{2016 -- 2017}{5 semaines}{LAPLACE}{Toulouse}%
 {Stage}%
 {Optique, traitement~d’image, thermique, Matlab, \LaTeX, découverte du monde de la recherche.}
 
-\experience{2016 à maintenant}{}{}{Toulouse}%
+\experience{2016 à aujourd'~hui}{}{}{Toulouse}%
 {Cours particulier}
 {Pédagogie, mathématique, automatique, visualisation}
-\end{minipage}
-
-
-% -----------------------
+\end{minipage}%
+\vspace*{-5mm}% -----------------------
 \partie{Compétences}
 % -----------------------
-
 %\begin{cvcolumns}
 %\tripleitemiseavecTitre{coucou}{{\begin{itemize}\item 1 \item 2 \end{itemize}}}{ça}{3 4}{va}{5 6}
 \tripleitemiseavecTitre{Automatique -- Temps continu ou échantillonné}{%
 {\begin{itemize}[label=\myitem]%
-\item \textbf{Modélisation:} {\small fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.}%
-\item \textbf{Analyse:} {\small fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.}%
+\item \textbf{Modélisation:} {\small fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, incertaine, de système à retard.}%
+\item \textbf{Analyse:} {\small fréquentielle,Théorie de Lyapunov, de performance, temporelle (linéaire et non linéaire), de système incertain, de robustesse, de stabilité sur systèmes à retard.}%
 \item \textbf{Synthèse de commande:}  {\small PID, multivariable, robuste, par retour d'état, sur système a retard.}
-\end{itemize}}}{Automatique -- Systèmes à événements discret :}{{\begin{itemize}[label=\myitem]%
+\end{itemize}}}{Automatique -- Systèmes à événements discret}{{\begin{itemize}[label=\myitem]%
 		\item Automates,%
 		\item {\small Réseaux de Petri (normaux, stochastiques/temporisés),}%
 		\item {\small Algèbre $(max,+)$,}%
 		\item {\small Modèles DEVS,}%
-		\item {\small Synthèse de commande,}%
 		\item {\small Analyse, simulation, implémentation,}%
-		\item {\small Diagnostiqueur et Contrôlabilité,}%
+		\item {\small Synthèse de commande contrôlabilité}%
 		\item {\small Langage,}%
-		\item {\small Commande supervisée,}%
-%		\item {\small Mise en \oe uvre logicielle/matérielle}%
-		\end{itemize}}}{Mise en \oe uvre :}{{%
+		\item {\small Commande supervisée et diagnostiqueur }%%		\item {\small Mise en \oe uvre logicielle/matérielle}%
+		\end{itemize}}}{Mise en \oe uvre}{{%
 		\begin{itemize}[label=\myitem]%
 \item \textbf{Informatique : }{\small Modélisation système (UML, UML2, SysML, systèmes embarqués), orienté objet, parallèle (exclusion mutuelle, synchronisation, thread , multitâches.).}%
-\item \textbf{Informatique industrielle : } {\small 	 DSP \textit{notions}, Micro-contrôleurs \textit{bases},} 
+\item \textbf{Informatique industrielle : } {\small 	 DSP \textit{(notions)}, Micro-contrôleurs \textit{(bases)},} 
 \item \textbf{Temps Réel : }{\small Norme OSEK/VDX, Ordonnancement, RTOS, Vérification d’exigence, Réactivité.}%
-\item \textbf{Réseaux : }{\small Internet \textit{bases}, Network Calculus, CAN, AFDX, Réseaux temps réel.}%
+\item \textbf{Réseaux : }{\small Internet \textit{(bases)}, Network Calculus, CAN, AFDX, Réseaux temps réel.}%
 	\end{itemize}%
 }}%
 	
@@ -173,13 +168,13 @@
 %\end{itemize}
 %}
 \tripleitemiseavecTitre%
-{Logiciels :}%
+{Logiciels}%
 {{%
 	Spécifiques automatique : {\small \textbf{Matlab}: Simulink, POO, GUI, RTW}.\\
 	Spécifique Informatique : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}.\\
 	Bureautique : {\small \textbf{\TeX maker}, \textbf{Suites Microsoft office}, \textbf{Libre Office}.}%
 }}%
-{Langages :}%
+{Langages}%
 {%
 	\textbf{Matlab} \textit{bonnes connaissances}, \textbf{\LaTeX}~\textit{bonnes connaissances}, \textbf{C}~\textit{bonnes connaissances}, 	\textbf{Assembleur}~\textit{notions}, \textbf{VHDL} \textit{bonnes bases}, \textbf{ST}~et~\textbf{IL-LIST}~\textit{notions}, \textbf{Arduino}~\textit{bonnes bases}, \textbf{Java}~\textit{bases}, \textbf{C++}~\textit{notions}.%
 }%
@@ -190,9 +185,9 @@
 	\item \textbf{Communication: } {\small orale et écrite en Français et en Anglais.} %
 	\item \textbf{Gestion et management de projet: } {\small Gantt, WBS, RACI, Agile.}%
 	\end{itemize}%
-}}
-% -----------------------
-\partie{Centres d'intérêts :}
+}}%
+\vspace*{-8mm}% -----------------------
+\partie{Centres d'intérêts}
 % -----------------------
 %\tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3}
 \tripleitemise[\bcbook]{Veille scientifique}[\bcfleur]{Voyages}[\bcvelo]{Bricolage (remorque vélo, électronique, …)}%
