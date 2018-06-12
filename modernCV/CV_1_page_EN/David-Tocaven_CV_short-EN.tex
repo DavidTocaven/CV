@@ -19,14 +19,14 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 % adjust the page margins
-\usepackage[scale=0.92,margin=9mm]{geometry}
+\usepackage[scale=0.92,margin=8mm]{geometry}
 %\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{David}{\textbf{TOCAVEN}}
 \title{\huge Automatic master's degree student} % fr : Étudiant master automatique                               % optional, remove / comment the line if not wanted
-\address{149 rue du Faubourg Bonnefoy}{31500 Toulouse}%{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{149 rue du Faubourg Bonnefoy}{31500 Toulouse}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{(+33)6 45 52 25 72}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
@@ -96,9 +96,9 @@
 %\experience{date}{durée}{établissement}{lieu}{intitulé}{Points intéressants}
 \experience{Apr. to Aug. 2018}{5 months}{LAAS-CNRS}{Toulouse}%
 {Research internship}%Stage de recherche 
-{Active diagnostic, hybrid system, RRA, observer, parity space}%diagnostic actif, système hybride, RRA, observer, parity space
+{Active diagnostic, hybrid system, observer, parity space}%diagnostic actif, système hybride, RRA, observer, parity space
 \experience{2016--2017}{4 weeks}{LAAS-CNRS}{Toulouse}%
-{Internship}%Stage
+{Research internship}%Stage
 {DEVS model, discrete time, discrete events, modelling}%Modèle DEVS, temps~discrets, événements~discrets, modélisation.
 
 \experience{2016 -- 2017}{6 months}%
@@ -108,13 +108,15 @@
 {Scientific method, automaton, project management, Matlab}%Méthode scientifique, automates, gestion~de~projet, Matlab
 
 \experience{2016 -- 2017}{5 weeks}{LAPLACE}{Toulouse}%
-{Internship}%Stage
+{Research internship}%Stage
 {Optic, digital image processing, thermal science, Matlab, \LaTeX , Discovering the research world}%Optique, traitement~d’image, thermique, Matlab, \LaTeX, découverte du monde de la recherche.
 
-\experience{2016 to present}{}{}{Toulouse}%
+\experience{2016\
+$\!\text{to}\!$ present}{}{}{Toulouse}%
 {Private lesson}%Cours particulier
-{Teaching, mathematics, automatic, visualization}%Pédagogie, mathématique, automatique, visualisation
-\end{minipage}%
+{Mathematics and automatic, \\
+Teaching skills and mathematical visualization}%Pédagogie, mathématique, automatique, visualisation
+\end{minipage}% 
 \vspace*{-5mm}% -----------------------
 \partie{Skills}%
 % -----------------------
@@ -124,34 +126,51 @@
 {%
 {\begin{itemize}[label=\myitem]%
 \item \textbf{Modelling: }%Modélisation
- {\small State space, linear and non linear, linear multiple input-output, uncertain, time delays system.}%fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.
+ {\small State space, linear and non linear, linear multiple input-output, uncertain, time delays system}%fréquentielle, d'espace d'état, linéaire et non linéaire, linéaire multivariable, d'observateurs, incertaine, de système à retard.
 % 
 \item \textbf{Analysis: }%Analyse:
-{\small frequency, temporal (linear and non-linear), Lyapunov theory, performance, uncertain system, robustness, stability of times delays system.}%fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.
+{\small frequency, temporal (linear and non-linear), Lyapunov theory, performance, uncertain system, robustness, stability of times delays system}%fréquentielle, Théorie de Lyapunov, de performance, de système linéaire et non linéaire, de système incertain, de robustesse, de stabilité sur systèmes à retard.
 \item \textbf{Control: }%Synthèse de commande:
 {\small PID, multiple input-output, robust, Observer based state feedback, late system}%PID, multivariable, robuste, par retour d'état, sur système a retard.
-\end{itemize}}}{Automatic control -- Discrete events systems}%Automatique -- Systèmes à événements discret :
+\end{itemize}}}%
+{Automatic control -- Discrete events systems}%Automatique -- Systèmes à événements discret :
 {{\begin{itemize}[label=\myitem]%
-		\item Automaton,%Automates
-		\item {\small Petri network (standard, stochastic, timed),}%Réseaux de Petri (normaux, stochastiques/temporisés),
-		\item {\small $(max,+)$ algebra,}%Algèbre $(max,+)$,
-		\item {\small DEVS models,}%Modèles DEVS
-		\item {\small control and controllability,}%Synthèse de commande et contrôlabilité,
-		\item {\small Analysis, simulation, implementation,}%Analyse, simulation, implémentation,
-		\item {\small Language,}%Langage,
-		\item {\small Supervised control and diagnosers.}%Commande supervisée et diagnostiqueur,
-%		\item {\small Mise en \oe uvre logicielle/matérielle}%
-		\end{itemize}}}{Implementation}%Mise en \oe uvre :
+		\item \textbf{Modelling : }%Modélsiation
+		{\small Automaton, Petri net (standard, stochastic, timed), %Réseaux de Petri (normaux, stochastiques/temporisés),
+		$(max,+)$ algebra, %Algèbre $(max,+)$,
+		Discrete Event System Specification (DEVS) models, %Modèles DEVS
+		Language}%Langage,
+		\item \textbf{Analysis : }%Analyse
+		{\small Cyclicity, controlability, diagnosability, determinism, coverage tree, marked and recognized language}
+		\item \textbf{Control and diagnostic : }%Commande et diagnostic
+		{\small Supervised control, diagnoser, observer}
+		\item \textbf{Implementation : }%mise en oeuvre
+		{\small test, simulation, C, VHDL and ST implementations, Oriented object approach}
+		\end{itemize}}}%
+% {Automatic control -- Discrete events systems}%Automatique -- Systèmes à événements discret :
+% {{\begin{itemize}[label=\myitem]%
+% 		\item Automaton,%Automates
+% 		\item {\small Petri network (standard, stochastic, timed),}%Réseaux de Petri (normaux, stochastiques/temporisés),
+% 		\item {\small $(max,+)$ algebra,}%Algèbre $(max,+)$,
+% 		\item {\small Discrete Event System Specification (DEVS) models,}%Modèles DEVS
+% 		\item {\small control and controllability,}%Synthèse de commande et contrôlabilité,
+% 		\item {\small Analysis, simulation, implementation,}%Analyse, simulation, implémentation,
+% 		\item {\small Language,}%Langage,
+% 		\item {\small Supervised control and diagnosers.}%Commande supervisée et diagnostiqueur,
+% %		\item {\small Mise en \oe uvre logicielle/matérielle}%
+% 		\end{itemize}}}%
+%
+{Implementation}%Mise en \oe uvre :
 {{%
 		\begin{itemize}[label=\myitem]%
 \item \textbf{Computer science : }%Informatique : 
-{\small System modelling (UML, UML2, SysML, embedded systems), object-oriented, parallel (mutual exclusion, synchronisation, thread, multitasking.).}%Modélisation système (UML, UML2, SysML, systèmes embarqués), orienté objet, parallèle (exclusion mutuelle, synchronisation, thread , multitâches.).
+{\small System modelling (UML, UML2, SysML, embedded systems), object-oriented, parallel (mutual exclusion, synchronisation, thread, multitasking)}%Modélisation système (UML, UML2, SysML, systèmes embarqués), orienté objet, parallèle (exclusion mutuelle, synchronisation, thread , multitâches.).
 \item \textbf{Industrial computing : }%Informatique industrielle : 
 {\small DSP \textit{notions}, Microcontroller \textit{basics}, } %DSP \textit{notions}, Micro-contrôleurs \textit{bases},
 \item \textbf{Real time : }%Temps Réel : 
-{\small OSEK/VDX standard, scheduling, RTOS, requirement checking, reactivity.}%Norme OSEK/VDX, Ordonnancement, RTOS, Vérification d’exigence, Réactivité.
+{\small OSEK/VDX standard, scheduling, RTOS, requirement checking, reactivity}%Norme OSEK/VDX, Ordonnancement, RTOS, Vérification d’exigence, Réactivité.
 \item \textbf{Network : }%Réseaux : 
-{\small Internet \textit{basics}, Network Calculus, CAN, AFDX, real time network.}%Internet \textit{bases}, Network Calculus, CAN, AFDX, Réseaux temps réel.
+{\small Internet \textit{basics}, Network Calculus, CAN, AFDX, real time network}%Internet \textit{bases}, Network Calculus, CAN, AFDX, Réseaux temps réel.
 	\end{itemize}%
 }}%
 	
@@ -182,23 +201,23 @@
 \tripleitemiseavecTitre%
 {Software skills}%Logiciels :
 {{%
-	For automatic : {\small \textbf{Matlab}: Simulink, OOP, GUI, RTW}.\\ %Spécifiques automatique : {\small \textbf{Matlab}: Simulink, POO, GUI, RTW}.
-	For computer science : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}.\\%Spécifique Informatique : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}.
-	Office software : {\small \textbf{\TeX maker}, \textbf{Microsoft office suite}, \textbf{free Office suite}.}%Bureautique : {\small \textbf{\TeX maker}, \textbf{Suites Microsoft office}, \textbf{Libre Office}.
+	For automatic : {\small \textbf{Matlab}: Simulink, OOP, GUI, RTW}\\ %Spécifiques automatique : {\small \textbf{Matlab}: Simulink, POO, GUI, RTW}.
+	For computer science : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}\\%Spécifique Informatique : {\small \textbf{Eclipse},\textbf{Git}, \textbf{Doxygen}}.
+	Office software : {\small \textbf{\TeX maker}, \textbf{Microsoft office suite}, \textbf{Free Office Suite}}%Bureautique : {\small \textbf{\TeX maker}, \textbf{Suites Microsoft office}, \textbf{Libre Office}.
 }}%
 {Languages}%Langages :
 {%
-	\textbf{Matlab} \textit{good knowledge}, \textbf{\LaTeX}~\textit{good knowledge}, \textbf{C}~\textit{good knowledge}, 	\textbf{Assembler}~\textit{notion}, \textbf{VHDL} \textit{good foundation}, \textbf{ST}~and~\textbf{IL-LIST}~\textit{notion}, \textbf{Arduino}~\textit{good foundation}, \textbf{Java}~\textit{basics}, \textbf{C++}~\textit{notion}.%
+	\textbf{Matlab} \textit{good knowledge}, \textbf{\LaTeX}~\textit{good knowledge}, \textbf{C}~\textit{good knowledge}, 	\textbf{Assembler}~\textit{notion}, \textbf{VHDL} \textit{good foundation}, \textbf{ST}~and~\textbf{IL-LIST}~\textit{notion}, \textbf{Arduino}~\textit{good foundation}, \textbf{Java}~\textit{basics}, \textbf{C++}~\textit{notion}%
 }%	\textbf{Matlab} \textit{bonnes connaissances}, \textbf{\LaTeX}~\textit{bonnes connaissances}, \textbf{C}~\textit{bonnes connaissances}, 	\textbf{Assembleur}~\textit{notions}, \textbf{VHDL} \textit{bonnes bases}, \textbf{ST}~et~\textbf{IL-LIST}~\textit{notions}, \textbf{Arduino}~\textit{bonnes bases}, \textbf{Java}~\textit{bases}, \textbf{C++}~\textit{notions}.%
 {Language and communication skills}%Langue et communication
 {{%
 	\begin{itemize}[label=\myitem]%
 	\item \textbf{Langue: } {\small French (mother tongue),  English}%{Langue: } {\small Anglais B2}%
-	\item \textbf{Communication: } {\small oral and written in French and English.} %{Communication: } {\small orale et écrite en Français et en Anglais.}
-	\item \textbf{Project management: } {\small Gantt, WBS, RACI, Agile.}%{Gestion et management de projet: } {\small Gantt, WBS, RACI, Agile.}
+	\item \textbf{Communication: } {\small oral and written in French and English} %{Communication: } {\small orale et écrite en Français et en Anglais.}
+	\item \textbf{Project management: } {\small Gantt, WBS, RACI, Agile}%{Gestion et management de projet: } {\small Gantt, WBS, RACI, Agile.}
 	\end{itemize}%
 }}%
-\vspace*{-8mm}% -----------------------
+\vspace*{-4mm}% -----------------------
 \partie{Personal interests}%Centres d'intérêts :
 %\vspace*{-3mm}% -----------------------
 %\tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3}
