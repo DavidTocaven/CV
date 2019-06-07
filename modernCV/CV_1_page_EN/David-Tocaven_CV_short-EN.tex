@@ -19,18 +19,20 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 % adjust the page margins
+\usepackage{fontawesome} % camera symbol in the personal interests section (\faCamera)
+\usepackage{fontspec}
 \usepackage[scale=0.92,margin=8mm]{geometry}
 %\setlength{•}{•}\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{David}{\textbf{TOCAVEN}}
-\title{\huge Automatic master's degree student} % fr : Étudiant master automatique                               % optional, remove / comment the line if not wanted
-\address{149 rue du Faubourg Bonnefoy}{31500 Toulouse}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\title{\huge Master's degree in real time systems and automation} % fr : Master d'automatique et de système temps réel     % optional, remove / comment the line if not wanted
+\address{Bel-Air}{81700 Puylaurens}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{(+33)6 45 52 25 72}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
-\email{david.tocaven@univ-tlse3.fr}                               % optional, remove / comment the line if not wanted
+\email{david.tocaven@gmail.com}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 %\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
@@ -77,7 +79,7 @@
 \vspace*{-3mm}%
 \partie{Education}% fr : Diplômes 
 % -----------------------
-\diplome{2015 -- 2017}{Real-time systems engineering - EEA master's degree}%Master EEA-Ingénierie des Systèmes Temps-Réels
+\diplome{2015 -- 2018}{Real-time systems engineering - EEA master's degree}%Master EEA-Ingénierie des Systèmes Temps-Réels
 {\textcolor{darkred}{Paul Sabatier University}}%Université Toulouse III -- Paul Sabatier
 {\textcolor{darkred}{Toulouse}}%Toulouse
 %
@@ -111,8 +113,7 @@
 {Research internship}%Stage
 {Optic, digital image processing, thermal science, Matlab, \LaTeX , Discovering the research world}%Optique, traitement~d’image, thermique, Matlab, \LaTeX, découverte du monde de la recherche.
 
-\experience{2016\
-$\!\text{to}\!$ present}{}{}{Toulouse}%
+\experience{2016\ $ \;\text{to}\; $ present}{}{}{Toulouse}%
 {Private lesson}%Cours particulier
 {Mathematics and automatic, \\
 Teaching skills and mathematical visualization}%Pédagogie, mathématique, automatique, visualisation
@@ -221,7 +222,7 @@ Teaching skills and mathematical visualization}%Pédagogie, mathématique, autom
 \partie{Personal interests}%Centres d'intérêts :
 %\vspace*{-3mm}% -----------------------
 %\tripleitemise[itemSymbole1]{text1}[itemSymbole2]{text2}[itemSymbole3]{text3}
-\tripleitemise[\bcbook]{Literature}[\bcfleur]{Travels}[\bcvelo]{Do-it-yourself (bike trailer, electronic, …)}%{Veille scientifique}[\bcfleur]{Voyages}[\bcvelo]{Bricolage (remorque vélo, électronique, …)}
+\tripleitemise[\faCamera]{Photography}[\bcfleur]{Travels}[\bcvelo]{Do-it-yourself (bike trailer, electronic, …)}%{Veille scientifique}[\bcfleur]{Voyages}[\bcvelo]{Bricolage (remorque vélo, électronique, …)}
 \end{samepage}%
 \end{document}
 
